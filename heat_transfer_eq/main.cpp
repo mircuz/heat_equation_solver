@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "support_heat.hpp"
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    
+    thermal_domain domain(10,10);
+    domain.set_conditions(273);
+    domain.set_source(5, 5, 350);
+    domain.visualize_values();
+
 }

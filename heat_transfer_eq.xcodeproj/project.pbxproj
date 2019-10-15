@@ -8,7 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A837ABFD2354709600A99138 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A837ABFC2354709600A99138 /* main.cpp */; };
+		A837AC062354EF0E00A99138 /* support_heat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A837AC042354EF0E00A99138 /* support_heat.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		A837AC03235470A000A99138 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.intel.compilers.icc.latest;
+			fileType = sourcecode.cpp;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A837ABF72354709600A99138 /* CopyFiles */ = {
@@ -25,6 +40,8 @@
 /* Begin PBXFileReference section */
 		A837ABF92354709600A99138 /* heat_transfer_eq */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = heat_transfer_eq; sourceTree = BUILT_PRODUCTS_DIR; };
 		A837ABFC2354709600A99138 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A837AC042354EF0E00A99138 /* support_heat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = support_heat.cpp; sourceTree = "<group>"; };
+		A837AC052354EF0E00A99138 /* support_heat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = support_heat.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				A837ABFC2354709600A99138 /* main.cpp */,
+				A837AC042354EF0E00A99138 /* support_heat.cpp */,
+				A837AC052354EF0E00A99138 /* support_heat.hpp */,
 			);
 			path = heat_transfer_eq;
 			sourceTree = "<group>";
@@ -74,6 +93,7 @@
 				A837ABF72354709600A99138 /* CopyFiles */,
 			);
 			buildRules = (
+				A837AC03235470A000A99138 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -120,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A837ABFD2354709600A99138 /* main.cpp in Sources */,
+				A837AC062354EF0E00A99138 /* support_heat.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +260,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_VERSION = com.intel.compilers.icc.latest;
+				ICC_USE_OPTIMIZED_HEADERS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +270,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_VERSION = com.intel.compilers.icc.latest;
+				ICC_USE_OPTIMIZED_HEADERS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
