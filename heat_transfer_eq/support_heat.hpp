@@ -29,6 +29,8 @@ public:
     double *x = new double[XDIM*YDIM];
     double *x_pos = new double[XDIM];
     double *y_pos = new double[YDIM];
+    double compute_dx(int i);
+    double compute_dy(int i);
     grid( int len_x_, int len_y_, float step_x_, float step_y_);
     ~grid();
 };
@@ -40,6 +42,8 @@ public:
     thermal_domain(int x_, int y_);
     void set_conditions(double temp);
     void set_source(int x_coord, int y_coord, double temp);
+    double set_alpha();
+    void solve_pde(double time, double alpha);
 };
 
 
