@@ -38,12 +38,13 @@ public:
 
 class thermal_domain: public grid {
 public:
-    int nx, ny;
+    int nx, ny, a;
     thermal_domain(int x_, int y_);
     void set_conditions(double temp);
-    void set_source(int x_coord, int y_coord, double temp);
-    double set_alpha();
-    void solve_pde(double time, double alpha);
+    void set_source(int x_coord, int y_coord, double temp, double time_of_contact);
+    void set_source_backend();
+    void set_alpha();
+    void solve_pde(double time);
 };
 
 
